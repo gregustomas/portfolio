@@ -1,7 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import ProfileCard from "../components/ProfileCard.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title='Tomáš Greguš | Frontend developer'>
-	<h1 class="text-3xl font-bold text-primary">Astro připraveno</h1>
+<Layout title="Tomáš Greguš | Frontend developer">
+  <main
+    class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto p-4 md:p-8 md:pt-20"
+  >
+    <aside>
+      <ProfileCard />
+    </aside>
+
+    <section>
+      <div class="w-full bg-amber-400 h-5"></div>
+    </section>
+  </main>
 </Layout>

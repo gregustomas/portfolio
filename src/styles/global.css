@@ -1,5 +1,10 @@
 @import "tailwindcss";
+@import "@flaticon/flaticon-uicons/css/all/all";
 
 @theme {
-  
+  --color-primary: #10a7cd;
+  --color-dark: #1f1f1f;
+  --color-light-gray: #f3f3f3;
+  --color-heading-text: #1d1d1d;
+  --color-light: #fcfcfc;
 }
