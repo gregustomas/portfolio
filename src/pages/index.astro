@@ -1,18 +1,19 @@
 ---
 import ProfileCard from "../components/ProfileCard.astro";
+import Hero from "../sections/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Tomáš Greguš | Frontend developer">
-  <main
+  <div
     class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto p-4 md:p-8 md:pt-20"
   >
     <aside>
       <ProfileCard />
     </aside>
 
-    <section>
-      <div class="w-full bg-amber-400 h-5"></div>
-    </section>
-  </main>
+    <main>
+      <Hero />
+    </main>
+  </div>
 </Layout>
