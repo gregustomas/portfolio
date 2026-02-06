@@ -1,0 +1,20 @@
+---
+import test from "../assets/profile.jpg";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<section>
+  <h2 class="text-5xl font-extrabold pb-4 md:text-8xl md:pb-6">
+    RECENT PROJECTS
+  </h2>
+
+  <ProjectCard
+    url="#"
+    img={test}
+    clr="bg-yellow-400"
+    project="Momentum"
+    text="Webová aplikace pomáhající udržet focus na potřebných úkolech."
+  />
+
+  <p class="text-xl font-semibold text-center pt-4">A další ve vývoji...</p>
+</section>

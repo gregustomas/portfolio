@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  url: string;
+  img: ImageMetadata;
+  project: string;
+  text: string;
+  clr: string;
+}
+
+const { url, img, clr, project, text } = Astro.props;
+---
+
+<a href={url} class="flex justify-between gap-10">
+  <div class="flex gap-5 items-center">
+    <div class:list={["w-30 p-4 pb-0 rounded-xl", clr]}>
+      <Image src={img} alt={project} class="rounded-t-xl" />
+    </div>
+    <div>
+      <h3 class="pb-2 font-bold text-lg md:text-2xl">{project}</h3>
+      <p>{text}</p>
+    </div>
+  </div>
+
+  <i class="fi fi-bs-up-right-from-square m-2"></i>
+</a>
