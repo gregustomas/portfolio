@@ -1,0 +1,39 @@
+---
+import SkillCard from "../components/SkillCard.astro";
+import htmlIcon from "../assets/icons/html-5.png";
+import cssIcon from "../assets/icons/css-3.png";
+import jsIcon from "../assets/icons/js.png";
+
+const skills = [
+  {
+    img: htmlIcon,
+    skill: "HTML",
+    text: "Struktura mých webů.",
+  },
+  {
+    img: cssIcon,
+    skill: "CSS",
+    text: "Styling a animace.",
+  },
+  {
+    img: jsIcon,
+    skill: "JS",
+    text: "Styling a animace.",
+  },
+];
+---
+
+<section class="grid col-span-1 gap-6 md:gap-10">
+  <h2 class="text-5xl font-extrabold pb-4 md:text-8xl">TECH SKILLS</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    {
+      skills.map((item) => (
+        <SkillCard
+        img={item.img} 
+        skill={item.skill} 
+        text={item.text} />
+      ))
+    }
+  </div>
+</section>
