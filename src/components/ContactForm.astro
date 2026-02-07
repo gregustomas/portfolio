@@ -1,0 +1,26 @@
+---
+const inputStyle =
+  "bg-gray-200 rounded-md p-2 focus:border focus:border-primary";
+---
+
+<form action="" class="grid gap-4">
+  <div class="grid grid-cols-2 gap-2">
+    <div class="grid gap-1.5">
+      <label class="text-sm font-medium">Name:</label>
+      <input type="text" class={inputStyle} placeholder="Jméno a přijmení" />
+    </div>
+
+    <div class="grid gap-1.5">
+      <label class="text-sm font-medium">E-mail:</label>
+      <input type="email" class={inputStyle} placeholder="mail@gmail.com" />
+    </div>
+  </div>
+
+  <div class="grid gap-1.5">
+    <label class="text-sm font-medium">E-mail:</label>
+    <textarea class:list={[inputStyle, "h-25"]} placeholder="mail@gmail.com"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="w-full bg-primary p-2 flex justify-center items-center rounded-md text-white font-bold">Odeslat</button>
+</form>
