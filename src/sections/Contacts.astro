@@ -1,13 +1,35 @@
 ---
 import ContactForm from "../components/ContactForm.astro";
-
-
+import githubIcon from "../assets/icons/github.png";
+import linkedInIcon from "../assets/icons/linkedin.png"
+import instagramIcon from "../assets/icons/instagram.png"
+import { Image } from "astro:assets";
 ---
 
-<div>
-    <section class="grid col-span-1 gap-6 md:gap-10">
+<section class="grid col-span-1 gap-6 md:gap-10">
   <h2 class="text-5xl font-extrabold pb-4 md:text-8xl">GET IN TOUCH</h2>
 
   <ContactForm />
+
+  <div class="flex gap-4 justify-between my-4">
+    <div>
+      <h3 class="pb-2 font-bold text-lg md:text-2xl">Contacts</h3>
+      <p>+420 737 863 412</p>
+      <p>gregustomas@seznam.cz</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-2">
+      <a href="">
+        <Image src={githubIcon} alt="github" class="w-10" />
+      </a>
+
+      <a href="">
+        <Image src={linkedInIcon} alt="github" class="w-10" />
+      </a>
+
+      <a href="">
+        <Image src={instagramIcon} alt="github" class="w-10" />
+      </a>
+    </div>
+  </div>
 </section>
-</div>
