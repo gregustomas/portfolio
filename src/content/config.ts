@@ -30,7 +30,7 @@ const highlightCollection = defineCollection({
       title: z.string(),
       text: z.string(),
       img: image(),
-      date: date(),
+      date: z.string(),
     }),
 });
 

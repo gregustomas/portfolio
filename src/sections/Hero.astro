@@ -1,6 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import firebaseLogo from "../assets/firebase.png";
+import { getCollection } from "astro:content";
+import HighlightCard from "../components/HighlightCard.astro";
+
+const highlight = await getCollection("highlight");
 ---
 
 <section class="grid col-span-1 gap-6 md:gap-10 text-base md:text-lg">
@@ -17,15 +19,14 @@ import firebaseLogo from "../assets/firebase.png";
     </p>
   </div>
 
-  <div class="rounded-2xl bg-dark text-slate-100 py-6 px-8 md:flex gap-2 md:px-10">
-    <div>
-      <h3 class="pb-2 font-bold text-lg md:text-2xl">Actuall: FireBase</h3>
-      <p class="text-gray-400 pb-6">
-        Učím se Firebase pro autentizaci a práci s daty v moderních webových
-        aplikacích.
-      </p>
-    </div>
-
-    <Image src={firebaseLogo} alt="firebase" class="w-20 m-auto" />
-  </div>
+  {
+    highlight.map((i) => (
+      <HighlightCard
+        title={i.data.title}
+        text={i.data.text}
+        img={i.data.img}
+        date={i.data.date}
+      />
+    ))
+  }
 </section>
