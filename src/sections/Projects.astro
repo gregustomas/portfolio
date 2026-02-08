@@ -1,6 +1,8 @@
 ---
-import test from "../assets/profile.jpg";
+import { getCollection } from "astro:content";
 import ProjectCard from "../components/ProjectCard.astro";
+
+const allProjects = await getCollection("projects");
 ---
 
 <section>
@@ -8,13 +10,16 @@ import ProjectCard from "../components/ProjectCard.astro";
     RECENT PROJECTS
   </h2>
 
-  <ProjectCard
-    url="#"
-    img={test}
-    clr="bg-yellow-400"
-    project="Momentum"
-    text="Webová aplikace pomáhající udržet focus na potřebných úkolech."
+  {allProjects.map(i => (
+    <ProjectCard
+    url={i.data.url}
+    img={i.data.img}
+    clr={i.data.clr}
+    project={i.data.project}
+    text={i.data.text}
   />
+
+  ))}
 
   <p class="text-xl font-semibold text-center pt-4">A další ve vývoji...</p>
 </section>

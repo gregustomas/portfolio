@@ -1,26 +1,8 @@
 ---
 import SkillCard from "../components/SkillCard.astro";
-import htmlIcon from "../assets/icons/html-5.png";
-import cssIcon from "../assets/icons/css-3.png";
-import jsIcon from "../assets/icons/js.png";
+import { getCollection } from "astro:content";
 
-const skills = [
-  {
-    img: htmlIcon,
-    skill: "HTML",
-    text: "Struktura mých webů.",
-  },
-  {
-    img: cssIcon,
-    skill: "CSS",
-    text: "Styling a animace.",
-  },
-  {
-    img: jsIcon,
-    skill: "JS",
-    text: "Styling a animace.",
-  },
-];
+const allSkills = await getCollection("skills");
 ---
 
 <section class="grid col-span-1 gap-6 md:gap-10">
@@ -28,11 +10,8 @@ const skills = [
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
     {
-      skills.map((item) => (
-        <SkillCard
-        img={item.img} 
-        skill={item.skill} 
-        text={item.text} />
+      allSkills.map((i) => (
+        <SkillCard skill={i.data.skill} text={i.data.text} img={i.data.img} />
       ))
     }
   </div>
