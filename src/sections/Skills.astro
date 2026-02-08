@@ -5,8 +5,8 @@ import { getCollection } from "astro:content";
 const allSkills = await getCollection("skills");
 ---
 
-<section class="grid col-span-1 gap-6 md:gap-10">
-  <h2 class="text-5xl font-extrabold pb-4 md:text-8xl">TECH SKILLS</h2>
+<section class="section-layout">
+  <h2 class="section-heading">TECH SKILLS</h2>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
     {
