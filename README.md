@@ -1,43 +1,28 @@
-# Astro Starter Kit: Minimal
+# 🚀 Portfolio - Tomáš Greguš
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Osobní portfolio postavené na moderním stacku s důrazem na rychlost, čistý kód a interaktivitu.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+**🔗 Live Demo:** [tomasgregus.vercel.app](https://tomasgregus.vercel.app)
 
-## 🚀 Project Structure
+## 🛠️ Tech Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Framework:** [Astro](https://astro.build/) (v5.x)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) (v4.0)
+- **Animace:** [GSAP](https://gsap.com/) + ScrollTrigger
+- **Ikony:** [Flaticon Uicons](https://unify-ui.com/uicons/)
+- **Deployment:** [Vercel](https://vercel.com/)
+- **Formulář:** [Formspree](https://formspree.io/)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## ⚡ Funkce
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **Bento Grid Design:** Moderní rozvržení karet pro projekty a skilly.
+- **Sticky Profile Card:** Profilová karta, která vás doprovází při scrollování (na desktopu).
+- **Responsive Form:** Plně funkční a stylovaný kontaktní formulář.
+- **Optimized Images:** Využití Astro `Image` komponenty pro bleskové načítání.
+- **Neo-brutalist UI:** Specifický vizuální styl s výraznými stíny a barvami.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📦 Lokální spuštění
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. Klonování repozitáře:
+   ```bash
+   git clone [https://github.com/vaseskutečnéjméno/portfolio.git](https://github.com/vaseskutečnéjméno/portfolio.git)
