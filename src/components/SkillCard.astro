@@ -10,17 +10,16 @@ interface Props {
 const { img, skill, text } = Astro.props;
 ---
 
-<div class="cursor-pointer flex gap-4 items-center w-full hover:bg-slate-50 p-2 group rounded-xl transition-all duration-300">
-  <div class="w-20 h-20 p-4 pb-0 rounded-xl bg-slate-50">
+<div class="cursor-pointer flex gap-4 items-center w-full group">
+  <div class="w-20 h-20 shrink-0 bg-slate-50 rounded-2xl flex items-center justify-center p-4 overflow-hidden shadow-sm">
     <Image 
-    src={img}
-    alt={skill}
-    class="w-full group-hover:scale-110 duration-300"
+      src={img} 
+      alt={skill} 
+      class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
     />
   </div>
 
-  <div>
-    <h3 class="card-title">{skill}</h3>
-    <p>{text}</p>
+  <div class="min-w-0"> <h3 class="text-xl font-black uppercase tracking-tight leading-none mb-1 truncate">{skill}</h3>
+    <p class="text-sm text-slate-500 leading-snug line-clamp-2">{text}</p>
   </div>
 </div>
