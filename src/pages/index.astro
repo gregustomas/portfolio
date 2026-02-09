@@ -23,3 +23,33 @@ import Contacts from "../sections/Contacts.astro";
     </main>
   </div>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const sections = document.querySelectorAll(".reveal");
+
+  sections.forEach((section) => {
+    gsap.fromTo(
+      section,
+      {
+        opacity: 0,
+        y: 30, // Sekce vyjede o 30px nahoru
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%", // Animace začne, když je vršek sekce v 85% výšky okna
+          toggleActions: "play none none none", // Přehraje se jen jednou
+        },
+      },
+    );
+  });
+</script>
