@@ -10,12 +10,12 @@ interface Props {
 const { img, skill, text } = Astro.props;
 ---
 
-<div class="flex gap-4 items-center w-full">
-  <div class="w-20 h-20 p-4 pb-0 rounded-xl bg-gray-200">
+<div class="flex gap-4 items-center w-full hover:bg-slate-50 p-2 group rounded-xl transition-all duration-300">
+  <div class="w-20 h-20 p-4 pb-0 rounded-xl bg-slate-50">
     <Image 
     src={img}
     alt={skill}
-    class="w-full"
+    class="w-full group-hover:scale-110 duration-300"
     />
   </div>
 

@@ -12,16 +12,24 @@ interface Props {
 const { url, img, clr, project, text } = Astro.props;
 ---
 
-<a href={url} class="flex justify-between gap-10">
-  <div class="flex gap-5 items-center">
-    <div class:list={["w-30 p-4 pb-0 rounded-xl", clr]}>
-      <Image src={img} alt={project} class="rounded-t-xl" />
+<a href={url} class="flex justify-between gap-10 p-4 rounded-4xl hover:bg-slate-50 transition-colors group">
+  <div class="flex gap-6 items-center">
+    
+    <div class:list={["w-24 h-24 rounded-2xl relative overflow-hidden shrink-0", clr]}>
+      <Image 
+        src={img} 
+        alt={project} 
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-auto object-cover rounded-t-lg shadow-sm group-hover:scale-110 transition-transform duration-300" 
+      />
     </div>
+
     <div>
       <h3 class="card-title">{project}</h3>
-      <p>{text}</p>
+      <p class="text-slate-500 text-sm leading-tight">{text}</p>
     </div>
   </div>
 
-  <i class="fi fi-bs-up-right-from-square m-2"></i>
+  <div class="mt-2 text-slate-400 group-hover:text-slate-900 transition-colors">
+    <i class="fi fi-bs-up-right-from-square"></i>
+  </div>
 </a>

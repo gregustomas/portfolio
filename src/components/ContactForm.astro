@@ -1,8 +1,3 @@
----
-const inputStyle =
-  "bg-gray-200 rounded-md p-2 focus:border focus:border-primary";
----
-
 <form action="https://formspree.io/f/mkovnvjn" method="POST" class="grid gap-4">
   <div class="grid grid-cols-2 gap-2">
     <div class="grid gap-1.5">
@@ -11,7 +6,7 @@ const inputStyle =
         type="text"
         name="name"
         required
-        class={inputStyle}
+        class="input-field"
         placeholder="Jméno a přijmení"
       />
     </div>
@@ -22,7 +17,7 @@ const inputStyle =
         type="email"
         name="email"
         required
-        class={inputStyle}
+        class="input-field"
         placeholder="mail@gmail.com"
       />
     </div>
@@ -31,7 +26,7 @@ const inputStyle =
   <div class="grid gap-1.5">
     <label class="text-sm font-medium">E-mail:</label>
     <textarea
-      class:list={[inputStyle, "h-25"]}
+      class="input-field h-25"
       required
       name="message"
       placeholder="mail@gmail.com"></textarea>

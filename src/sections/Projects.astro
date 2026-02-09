@@ -6,20 +6,21 @@ const allProjects = await getCollection("projects");
 ---
 
 <section class="section-layout">
-  <h2 class="section-heading">
-    RECENT PROJECTS
-  </h2>
+  <h2 class="section-heading">RECENT PROJECTS</h2>
 
-  {allProjects.map(i => (
-    <ProjectCard
-    url={i.data.url}
-    img={i.data.img}
-    clr={i.data.clr}
-    project={i.data.project}
-    text={i.data.text}
-  />
-
-  ))}
+  <div class="grid grid-cols-1 gap-5">
+    {
+      allProjects.map((i) => (
+        <ProjectCard
+          url={i.data.url}
+          img={i.data.img}
+          clr={i.data.clr}
+          project={i.data.project}
+          text={i.data.text}
+        />
+      ))
+    }
+  </div>
 
   <p class="text-xl font-semibold text-center pt-4">A další ve vývoji...</p>
 </section>

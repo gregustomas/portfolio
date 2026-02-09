@@ -22,4 +22,10 @@
   .card-title {
     @apply pb-2 font-bold text-lg md:text-2xl;
   }
+
+  .input-field {
+    @apply bg-gray-200 rounded-md p-2 border-2 border-transparent 
+           focus:border-primary outline-none 
+           transition-all placeholder:text-gray-400;
+  }
 }
