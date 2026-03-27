@@ -1,7 +1,7 @@
 {
   "project": "Momentum",
-  "text": "Webová aplikace pomáhající udržet focus na potřebných úkolech.",
+  "text": "Focus-driven productivity web app.",
   "url": "https://toms-momentum.vercel.app/",
-  "clr": "bg-red-400",
+  "clr": "bg-sky-400",
   "img": "../../assets/images/projects/momentum.png"
 }

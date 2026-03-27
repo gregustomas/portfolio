@@ -1,0 +1,7 @@
+{
+  "project": "StockSense",
+  "text": "Real-time inventory management system.",
+  "url": "https://stock-sense-tau.vercel.app/",
+  "clr": "bg-violet-400",
+  "img": "../../assets/images/projects/stock-sense.png"
+}

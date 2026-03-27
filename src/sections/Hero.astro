@@ -7,26 +7,15 @@ const highlight = await getCollection("highlight");
 
 <section class="section-layout reveal">
   <div>
-    <h1 class="section-heading">
+    <h1 class="section-heading md:text-8xl">
       FRONTEND
       <span class="text-primary">DEVELOPER</span>
     </h1>
 
     <p>
-      Ahoj, jsem Tom. Junior frontend developer tvořící moderní weby a webové
-      aplikace pomocí Reactu. Mojím cílem je budovat reálné a přínosné produkty
-      a stát se fullstack MERN developerem.
+      I'm software engineering student with a passion for the web development. I build with
+      Next.js and Astro, focusing on modern tech, clean code, and design that
+      actually works.
     </p>
   </div>
-
-  {
-    highlight.map((i) => (
-      <HighlightCard
-        title={i.data.title}
-        text={i.data.text}
-        img={i.data.img}
-        date={i.data.date}
-      />
-    ))
-  }
 </section>
