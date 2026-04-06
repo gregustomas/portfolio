@@ -4,5 +4,5 @@
   "url": "https://stock-sense-tau.vercel.app/",
   "clr": "bg-violet-400",
   "img": "../../assets/images/projects/stock-sense.png",
-  "stack": ["TypeScript", "Next.js", "Firebase", "Tailwind"]
+  "stack": ["TypeScript", "Next.js", "Firebase"]
 }
