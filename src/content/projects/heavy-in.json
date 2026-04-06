@@ -3,5 +3,6 @@
   "text": "Share and discover workout plans.",
   "url": "https://heavy-in.vercel.app/",
   "clr": "bg-red-400",
-  "img": "../../assets/images/projects/heavy-in.png"
+  "img": "../../assets/images/projects/heavy-in.png",
+  "stack": ["TypeScript", "Next.js", "Firebase", "Tailwind"]
 }

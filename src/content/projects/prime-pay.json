@@ -1,0 +1,8 @@
+{
+  "project": "PrimePay",
+  "text": "Award-winning hackathon banking system.",
+  "url": "https://hackathon-kohl-mu.vercel.app/",
+  "clr": "bg-emerald-400",
+  "img": "../../assets/images/projects/prime-pay-dash.png",
+  "stack": ["TypeScript", "Next.js", "Supabase", "Tailwind"]
+}

@@ -3,5 +3,6 @@
   "text": "Focus-driven productivity web app.",
   "url": "https://toms-momentum.vercel.app/",
   "clr": "bg-sky-400",
-  "img": "../../assets/images/projects/momentum.png"
+  "img": "../../assets/images/projects/momentum.png",
+  "stack": ["JavaScript", "React", "Tailwind"]
 }

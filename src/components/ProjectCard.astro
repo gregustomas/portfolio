@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { ExternalLink } from "lucide-react";
 
 interface Props {
   url: string;
@@ -7,29 +8,46 @@ interface Props {
   project: string;
   text: string;
   clr: string;
+  stack: string[];
 }
 
-const { url, img, clr, project, text } = Astro.props;
+const { url, img, clr, project, text, stack } = Astro.props;
 ---
 
-<a href={url} class="flex justify-between gap-10 p-4 rounded-4xl hover:bg-slate-50 transition-colors group">
+<a
+  href={url}
+  class="flex justify-between gap-10 p-4 rounded-4xl hover:bg-slate-50 transition-colors group"
+>
   <div class="flex gap-6 items-center">
-    
-    <div class:list={["w-24 h-24 rounded-2xl relative overflow-hidden shrink-0", clr]}>
-      <Image 
-        src={img} 
-        alt={project} 
-        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-auto object-cover rounded-t-lg shadow-sm group-hover:scale-110 transition-transform duration-300" 
+    <div
+      class:list={[
+        "w-24 h-24 rounded-2xl relative overflow-hidden shrink-0",
+        clr,
+      ]}
+    >
+      <Image
+        src={img}
+        alt={project}
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-auto object-cover rounded-t-lg shadow-sm group-hover:scale-110 transition-transform duration-300"
       />
     </div>
 
     <div>
       <h3 class="card-title">{project}</h3>
-      <p class="leading-tight text-sm">{text}</p>
+      <p class="leading-tight text-sm pb-4">{text}</p>
+      <div class="flex gap-2">
+        {
+          stack.map((s) => (
+            <span class="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted">
+              {s}
+            </span>
+          ))
+        }
+      </div>
     </div>
   </div>
 
   <div class="mt-2 text-slate-400 group-hover:text-slate-900 transition-colors">
-    <i class="fi fi-bs-up-right-from-square"></i>
+    <ExternalLink />
   </div>
 </a>
