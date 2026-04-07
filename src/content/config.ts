@@ -27,6 +27,7 @@ const websitesCollection = defineCollection({
   type: "data",
   schema: ({ image }) =>
     z.object({
+      order: z.number(),
       title: z.string(),
       text: z.string(),
       url: z.string().url(),

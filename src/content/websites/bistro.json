@@ -1,0 +1,19 @@
+{
+  "order": 2,
+  "title": "Bistro",
+  "text": "A practice recreation of the Shadcn Studio template. I built this to master Astro and Tailwind CSS v4, specifically focusing on training my pixel-perfect implementation according to the original design. Fully deployed on Cloudflare Pages.",
+  "url": "https://bistro-9qq.pages.dev/",
+  "img": "../../assets/images/websites/bistro.png",
+  "features": [
+    "Astro & React Islands",
+    "Tailwind CSS v4",
+    "Cloudflare Pages",
+    "Embla Carousel"
+  ],
+  "stats": [
+    "Pixel Perfect Design",
+    "Synchronized Hero Slider",
+    "Dark / Light Mode Toggle",
+    "Cloudflare Deployment"
+  ]
+}

@@ -1,14 +1,17 @@
 ---
 import { getCollection } from "astro:content";
-import WebsiteCard from "../components/WebsiteCard.astro";
+import WebsitesCarousel from "../components/islands/WebsitesCarousel";
 
-const allWebsites = await getCollection("websites");
+const allWebsites = (await getCollection("websites")).sort(
+  (a, b) => a.data.order - b.data.order
+);
 ---
 
-<section class="section-layout reveal">
+<section class="section-layout reveal overflow-hidden">
   <h2 class="section-heading">Websites</h2>
 
-  <div class="grid grid-cols-1 gap-5">
+  <WebsitesCarousel websites={allWebsites.map((i) => i.data)} client:load />
+  <!-- <div class="grid grid-cols-1 gap-5">
     {
       allWebsites.map((i) => (
         <WebsiteCard
@@ -21,5 +24,5 @@ const allWebsites = await getCollection("websites");
         />
       ))
     }
-  </div>
+  </div> -->
 </section>
