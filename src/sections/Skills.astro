@@ -2,7 +2,9 @@
 import SkillCard from "../components/SkillCard.astro";
 import { getCollection } from "astro:content";
 
-const allSkills = await getCollection("skills");
+const allSkills = (await getCollection("skills")).sort(
+  (a, b) => a.data.order - b.data.order
+);
 ---
 
 <section class="section-layout reveal">

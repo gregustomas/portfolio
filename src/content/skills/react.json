@@ -1,4 +1,5 @@
 {
+    "order": 3,
     "skill": "React",
     "text": "My go-to for interactive UIs",
     "img": "../../assets/icons/React.png"

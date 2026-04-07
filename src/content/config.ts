@@ -17,6 +17,7 @@ const skillsCollection = defineCollection({
   type: "data",
   schema: ({ image }) =>
     z.object({
+      order: z.number(),
       skill: z.string(),
       text: z.string(),
       img: image(),

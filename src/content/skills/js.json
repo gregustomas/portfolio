@@ -1,4 +1,5 @@
 {
+    "order": 1,
     "skill": "JavaScript",
     "text": "Foundation of my work",
     "img": "../../assets/icons/js.png"

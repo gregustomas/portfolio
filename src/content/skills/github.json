@@ -1,4 +1,5 @@
 {
+  "order": 10,
   "skill": "GitHub",
   "text": "Where my code lives",
   "img": "../../assets/icons/github.png"

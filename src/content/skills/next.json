@@ -1,4 +1,5 @@
 {
+    "order": 4,
     "skill": "Next.js",
     "text": "Full-stack React, done right",
     "img": "../../assets/icons/Next.png"
