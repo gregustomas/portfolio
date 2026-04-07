@@ -23,19 +23,21 @@ const skillsCollection = defineCollection({
     }),
 });
 
-const highlightCollection = defineCollection({
+const websitesCollection = defineCollection({
   type: "data",
   schema: ({ image }) =>
     z.object({
       title: z.string(),
       text: z.string(),
+      url: z.string().url(),
       img: image(),
-      date: z.string(),
+      features: z.array(z.string()),
+      stats: z.array(z.string())
     }),
 });
 
 export const collections = {
   'projects': projectsCollection,
   'skills': skillsCollection,
-  'highlight': highlightCollection,
+  'websites': websitesCollection,
 };

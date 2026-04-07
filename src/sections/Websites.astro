@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import WebsiteCard from "../components/WebsiteCard.astro";
+
+const allWebsites = await getCollection("websites");
+---
+
+<section class="section-layout reveal">
+  <h2 class="section-heading">Websites</h2>
+
+  <div class="grid grid-cols-1 gap-5">
+    {
+      allWebsites.map((i) => (
+        <WebsiteCard
+          url={i.data.url}
+          img={i.data.img}
+          title={i.data.title}
+          text={i.data.text}
+          features={i.data.features}
+          stats={i.data.stats}
+        />
+      ))
+    }
+  </div>
+</section>

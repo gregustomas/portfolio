@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  url: string;
+  title: string;
+  img: ImageMetadata;
+  text: string;
+  features: string[];
+  stats: string[];
+}
+
+const { url, title, text, img, features, stats } = Astro.props;
+---
+
+<div class="group flex flex-col hover:bg-white transition-colors rounded-2xl">
+  <a href={url} class="overflow-hidden rounded-2xl">
+    <Image
+      src={img}
+      alt={title}
+      class="object-cover group-hover:scale-105 transition-transform"
+    />
+  </a>
+
+  <div class="flex flex-col rounded-b-2xl py-6 px-4 gap-4">
+    <div class="pb-2">
+      <h3 class="card-title text-2xl"><a href={url}>{title}</a></h3>
+      <p>{text}</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 px-2">
+      <!-- Features -->
+      <div>
+        <h4 class="card-title font-semibold text-lg text-slate-900">
+          Features
+        </h4>
+
+        <div class="grid gap-2">
+          {
+            features.map((f) => (
+              <span class="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted flex gap-2 items-center w-fit">
+                <Icon
+                  name="lucide:check-circle-2"
+                  class="w-4 h-4 text-indigo-500"
+                />
+                {f}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- stats -->
+      <div>
+        <h4 class="card-title font-semibold text-lg text-slate-900">Stats</h4>
+
+        <div class="flex flex-col gap-2">
+          {
+            stats.map((s) => (
+              <span class="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted flex gap-2 items-center w-fit">
+                <Icon
+                  name="lucide:chart-line"
+                  class="w-4 h-4 text-indigo-500"
+                />
+                {s}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "title": "Barber Shop Šik",
+  "text": "My first commercial project: modern landing page for a local barber shop. I handled everything from Figma design to WordPress implementation, including a booking system, email setup, and local SEO.",
+  "url": "https://kadernictvi-sik.cz/",
+  "img": "../../assets/images/websites/sik.png",
+  "features": [
+    "WordPress & Figma",
+    "Booking System",
+    "Local SEO",
+    "Email Configuration"
+  ],
+  "stats": [
+    "Top 5 Local Search Result",
+    "6.8% Average CTR",
+    "430+ Annual Search Clicks",
+    "Fully Automated Bookings"
+  ]
+}
