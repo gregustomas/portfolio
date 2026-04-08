@@ -1,7 +1,9 @@
 {
+  "order": 3,
   "project": "Momentum",
   "text": "Focus-driven productivity web app.",
   "url": "https://toms-momentum.vercel.app/",
+  "github": "https://github.com/gregustomas/momentum-v1.0",
   "clr": "bg-sky-400",
   "img": "../../assets/images/projects/momentum.png",
   "stack": ["JavaScript", "React", "Tailwind"]

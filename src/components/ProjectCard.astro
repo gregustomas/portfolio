@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import { ExternalLink } from "lucide-react";
+import { Icon } from "astro-icon/components";
 
 interface Props {
   url: string;
+  github?: string;
   img: ImageMetadata;
   project: string;
   text: string;
@@ -11,43 +12,76 @@ interface Props {
   stack: string[];
 }
 
-const { url, img, clr, project, text, stack } = Astro.props;
+const { url, github, img, clr, project, text, stack } = Astro.props;
 ---
 
-<a
-  href={url}
-  class="flex items-start justify-between gap-4 p-4 rounded-4xl hover:bg-slate-50 transition-colors group"
->
-  <div class="flex gap-6 items-center min-w-0 flex-1">
-    <div
-      class:list={[
-        "w-24 h-24 rounded-2xl relative overflow-hidden shrink-0",
-        clr,
-      ]}
-    >
-      <Image
-        src={img}
-        alt={project}
-        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-auto object-cover rounded-t-lg shadow-sm group-hover:scale-110 transition-transform duration-300"
-      />
-    </div>
+<div class="flex gap-4 p-4 rounded-3xl hover:bg-white transition-all group">
+  <div class:list={["w-20 h-20 rounded-2xl relative overflow-hidden shrink-0", clr]}>
+    <Image
+      src={img}
+      alt={project}
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80%] h-auto object-cover rounded-t-lg shadow-sm group-hover:scale-110 transition-transform duration-300"
+    />
+  </div>
 
-    <div class="min-w-0">
+  <div class="flex flex-col flex-1 min-w-0 gap-2">
+    <div>
       <h3 class="card-title">{project}</h3>
-      <p class="leading-tight text-sm pb-4">{text}</p>
-      <div class="flex flex-wrap gap-2">
-        {
-          stack.map((s) => (
-            <span class="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted">
-              {s}
-            </span>
-          ))
-        }
-      </div>
+      <p class="md:mb-2 text-sm">{text}</p>
+    </div>
+
+    <div class="flex flex-wrap gap-1.5">
+      {stack.map((s) => (
+        <span class="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted">{s}</span>
+      ))}
+    </div>
+
+    <!-- mobile btns -->
+    <div class="flex sm:hidden gap-2 mt-2">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white border border-slate-200 hover:border-slate-400 transition-colors"
+      >
+        <Icon name="lucide:external-link" class="w-3.5 h-3.5" />
+        Live
+      </a>
+      {github && (
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white border border-slate-200 hover:border-slate-400 transition-colors"
+        >
+          <Icon name="lucide:github" class="w-3.5 h-3.5" />
+          GitHub
+        </a>
+      )}
     </div>
   </div>
 
-  <div class="pt-2 pl-3 shrink-0 text-slate-400 group-hover:text-slate-900 transition-colors">
-    <ExternalLink size={18} />
+  <!-- desktop btns -->
+  <div class="hidden sm:flex flex-col gap-2 shrink-0 pt-1">
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white border border-slate-200 hover:border-slate-400 transition-colors"
+    >
+      <Icon name="lucide:external-link" class="w-3.5 h-3.5" />
+      Live
+    </a>
+    {github && (
+      <a
+        href={github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-white border border-slate-200 hover:border-slate-400 transition-colors"
+      >
+        <Icon name="lucide:github" class="w-3.5 h-3.5" />
+        GitHub
+      </a>
+    )}
   </div>
-</a>
+</div>

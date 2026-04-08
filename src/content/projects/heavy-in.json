@@ -1,8 +1,10 @@
 {
+  "order": 4,
   "project": "HeavyIn",
   "text": "Share and discover workout plans.",
   "url": "https://heavy-in.vercel.app/",
+  "github": "https://github.com/gregustomas/HeavyIn",
   "clr": "bg-red-400",
   "img": "../../assets/images/projects/heavy-in.png",
-  "stack": ["TypeScript", "Next.js", "Firebase"]
+  "stack": ["TypeScript", "Next.js", "Firebase", "Tailwind"]
 }

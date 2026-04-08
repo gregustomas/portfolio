@@ -1,8 +1,10 @@
 {
+  "order": 2,
   "project": "PrimePay",
   "text": "Award-winning hackathon banking system.",
   "url": "https://hackathon-kohl-mu.vercel.app/",
+  "github": "https://github.com/gregustomas/hackathon",
   "clr": "bg-emerald-400",
   "img": "../../assets/images/projects/prime-pay-dash.png",
-  "stack": ["TypeScript", "Next.js", "Supabase"]
+  "stack": ["TypeScript", "Next.js", "Supabase", "Tailwind"]
 }

@@ -4,9 +4,11 @@ const projectsCollection = defineCollection({
   type: "data",
   schema: ({ image }) =>
     z.object({
+      order: z.number(),
       project: z.string(),
       text: z.string(),
       url: z.string().url(),
+      github: z.string().optional(),
       clr: z.string(),
       img: image(),
       stack: z.array(z.string())

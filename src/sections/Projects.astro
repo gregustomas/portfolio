@@ -2,7 +2,9 @@
 import { getCollection } from "astro:content";
 import ProjectCard from "../components/ProjectCard.astro";
 
-const allProjects = await getCollection("projects");
+const allProjects = (await getCollection("projects")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
 <section class="section-layout reveal">
@@ -13,6 +15,7 @@ const allProjects = await getCollection("projects");
       allProjects.map((i) => (
         <ProjectCard
           url={i.data.url}
+          github={i.data.github}
           img={i.data.img}
           clr={i.data.clr}
           project={i.data.project}
