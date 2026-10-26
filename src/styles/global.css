@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@flaticon/flaticon-uicons/css/all/all";
+@import "@flaticon/flaticon-uicons/css/brands/all";
 
 @theme {
   --color-primary: #10a7cd;

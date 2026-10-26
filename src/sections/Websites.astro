@@ -1,16 +1,32 @@
 ---
 import { getCollection } from "astro:content";
+import { getImage } from "astro:assets";
 import WebsitesCarousel from "../components/islands/WebsitesCarousel";
 
 const allWebsites = (await getCollection("websites")).sort(
   (a, b) => a.data.order - b.data.order
+);
+
+const websites = await Promise.all(
+  allWebsites.map(async ({ data }) => {
+    const img = await getImage({
+      src: data.img,
+      width: 800,
+      format: "webp",
+      quality: 75,
+    });
+    return {
+      ...data,
+      img: { src: img.src, width: img.attributes.width, height: img.attributes.height },
+    };
+  })
 );
 ---
 
 <section class="section-layout reveal overflow-hidden">
   <h2 class="section-heading">Websites</h2>
 
-  <WebsitesCarousel websites={allWebsites.map((i) => i.data)} client:load />
+  <WebsitesCarousel websites={websites} client:visible />
   <!-- <div class="grid grid-cols-1 gap-5">
     {
       allWebsites.map((i) => (

@@ -1,11 +1,11 @@
 import { ChartLine, CheckCircle2 } from "lucide-react";
-import type { ImageMetadata } from "astro";
 
 interface Props {
   url: string;
   title: string;
   text: string;
-  img: ImageMetadata;
+  img: { src: string; width?: number; height?: number };
+  priority?: boolean;
   features: string[];
   stats: string[];
 }
@@ -15,6 +15,7 @@ export default function WebsiteCard({
   title,
   text,
   img,
+  priority,
   features,
   stats,
 }: Props) {
@@ -23,6 +24,10 @@ export default function WebsiteCard({
       <a href={url} className="overflow-hidden rounded-2xl">
         <img
           src={img.src}
+          width={img.width}
+          height={img.height}
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
           alt={title}
           className="object-cover group-hover:scale-105 transition-transform"
         />
@@ -45,7 +50,7 @@ export default function WebsiteCard({
 
             <div className="grid gap-2">
               {features.map((f) => (
-                <span className="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted flex gap-2 items-center w-fit">
+                <span key={f} className="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted flex gap-2 items-center w-fit">
                   <CheckCircle2 className="w-4 h-4 text-indigo-500" />
                   {f}
                 </span>
@@ -61,7 +66,7 @@ export default function WebsiteCard({
 
             <div className="flex flex-col gap-2">
               {stats.map((s) => (
-                <span className="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted flex gap-2 items-center w-fit">
+                <span key={s} className="px-2 py-0.5 text-xs text-dark/80 rounded-full bg-muted flex gap-2 items-center w-fit">
                   <ChartLine className="w-4 h-4 text-indigo-500" />
                   {s}
                 </span>

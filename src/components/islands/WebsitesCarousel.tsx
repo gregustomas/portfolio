@@ -1,4 +1,3 @@
-import type { ImageMetadata } from "astro";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import WebsiteCard from "./WebsiteCard";
@@ -8,7 +7,7 @@ interface Website {
   title: string;
   text: string;
   url: string;
-  img: ImageMetadata;
+  img: { src: string; width?: number; height?: number };
   features: string[];
   stats: string[];
 }
@@ -34,9 +33,9 @@ export default function WebsitesCarousel({ websites }: Props) {
     <div className="overflow-hidden">
       <div ref={emblaRef} className="-ml-4">
         <div className="flex">
-          {websites.map((site: Website) => (
+          {websites.map((site: Website, i) => (
             <div key={site.title} className="shrink-0 w-full pl-4">
-              <WebsiteCard {...site} />
+              <WebsiteCard {...site} priority={i === 0} />
             </div>
           ))}
         </div>
