@@ -1,0 +1,19 @@
+{
+  "order": 1,
+  "title": "jsemzvosku.cz",
+  "text": "End-to-end development of a custom e-shop for a handmade soy candle brand, built without an off-the-shelf platform. It covers a product catalog with size variants and gift sets, guest checkout, card and Apple Pay / Google Pay payments, Packeta and personal pickup shipping, automatic invoicing, and an admin panel the owner runs the shop from. Performance-tuned on Cloudflare Workers with edge image resizing, plus transactional e-mails and brand design.",
+  "url": "https://jsemzvosku.cz/",
+  "img": "../../assets/images/websites/jsemzvosku.png",
+  "features": [
+    "Next.js + Supabase + Cloudflare",
+    "Comgate, Packeta & Fakturoid",
+    "Custom Admin Panel",
+    "Gift Box Builder"
+  ],
+  "stats": [
+    "92 Mobile PageSpeed",
+    "100 Accessibility, Best Practices, SEO",
+    "3,300+ Automated Tests",
+    "Atomic Stock Control"
+  ]
+}
